@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+body {
+    font-family: -apple-system, 'Helvetica-Neue', sans-serif;
+    background: #EBEAD8;
+    color: #303A27;
+    height: 100%;
+    line-height: 1.25;
+}
+
+a {
+    color: inherit;
+}
+
+main {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#header-title {
+    font-size: max(5vw, 40px);
+}
+
+#header-subtitle {
+    font-size: max(3vw, 28px);
+}
+
+footer {   
+    font-family: 'Georgia', 'Times', serif;
+    position: absolute;
+    bottom: 2rem;
+    font-size: max(2vw, 20px);
+    margin: 0 2rem;
+}
+
+@media (max-width: 1024px) {
+    main {
+        margin: 1rem;
+    }
+
+    footer {
+        margin: 0 1rem;
+    }
+}
