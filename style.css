@@ -1,50 +1,96 @@
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    border: none;
+@font-face {
+  font-family: Ortica;
+  font-style: normal;
+  font-weight: normal;
+  src: url(fonts/Ortica.otf);
+}
+
+@font-face {
+    font-family: Ortica;
+    font-style: normal;
+    font-weight: bold;
+    src: url(fonts/Ortica-Bold.otf);
+  }
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
 }
 
 body {
-    font-family: -apple-system, 'Helvetica-Neue', sans-serif;
-    background: #EBEAD8;
-    color: #303A27;
-    height: 100%;
-    line-height: 1.25;
+  font-family: Ortica;
+  width: 100vw;
+  height: 100%;
+  background: #ffffff;
+  color: #222222;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
 }
 
 a {
-    color: inherit;
+  color: currentColor;
 }
 
-main {
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
+section {
+  grid-column: col-start 2 / span 4;
+  grid-row: 4;
 }
 
-#header-title {
-    font-size: max(5vw, 40px);
+footer {
+  grid-column: col-start 2 / span 4;
+  grid-row: 6;
 }
 
-#header-subtitle {
-    font-size: max(3vw, 28px);
+h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 130%;
+  margin-bottom: 0.5em;
 }
 
-footer {   
-    font-family: 'Georgia', 'Times', serif;
-    position: absolute;
-    bottom: 2rem;
-    font-size: max(2vw, 20px);
-    margin: 0 2rem;
+h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 130%;
 }
 
 @media (max-width: 1024px) {
-    main {
-        margin: 1rem;
-    }
+  section,
+  footer {
+    grid-column: col-start 2 / span 10;
+  }
 
-    footer {
-        margin: 0 1rem;
-    }
+  h1 {
+    font-size: 30px;
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
 }
